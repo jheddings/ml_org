@@ -1,0 +1,333 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "Comments", "http://www.heddway.com/"
+            VALUE "CompanyName", "Heddway"
+            VALUE "FileDescription", "Winamp Media Library Organizer Plugin"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "ml_org.dll"
+            VALUE "LegalCopyright", "(c) 2005, Heddway.  All rights reserved."
+            VALUE "OriginalFilename", "ml_org.dll"
+            VALUE "ProductName", "ml_org"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_RULE_EDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_CONFIG_ADVANCED, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        TOPMARGIN, 1
+    END
+
+    IDD_CONFIG_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        TOPMARGIN, 1
+    END
+
+    IDD_CONFIG_LOGGING, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        TOPMARGIN, 1
+    END
+
+    IDD_CONFIG_RULES, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        TOPMARGIN, 1
+    END
+
+    IDD_CONFIG_BLANK, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        TOPMARGIN, 1
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROGRESS DIALOGEX 10, 10, 139, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | 
+    WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,87,29,50,14
+    CONTROL         "",IDC_PROGBAR,"msctls_progress32",WS_BORDER,0,1,139,14
+    LTEXT           "",IDC_TITLE,2,16,134,8
+    LTEXT           "",IDC_STATUS,2,31,78,8
+END
+
+IDD_RULE_EDIT DIALOGEX 0, 0, 243, 150
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ml_org: Organization Rule"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,126,129,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,186,129,50,14
+    GROUPBOX        "Condition",IDC_STATIC,7,7,229,50
+    EDITTEXT        IDC_RULE_CONDITION,11,40,220,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Edit Query",IDC_QUERY_EDIT,183,19,45,12
+    GROUPBOX        "Format String",IDC_STATIC,7,62,229,63
+    EDITTEXT        IDC_RULE_FORMAT,11,96,221,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Format Help",IDC_FORMAT_HELP,183,75,45,12
+    LTEXT           "Preview:",IDC_STATIC,15,112,29,8
+    LTEXT           "",IDC_RULE_PREVIEW,48,112,181,8
+    LTEXT           "Specify the condition as a query string.\nPress ""Edit Query"" for a query string editor.",
+                    IDC_STATIC,15,17,163,19
+    LTEXT           "Specify the format for the organized filename.\nPress ""Format Help"" for more information.",
+                    IDC_STATIC,15,73,168,19
+END
+
+IDD_CONFIG DIALOGEX 0, 0, 300, 229
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "ml_org: Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,164,209,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,209,50,14
+    CONTROL         "",IDC_CONFIG_TABS,"SysTabControl32",0x0,7,7,286,197
+END
+
+IDD_CONFIG_ADVANCED DIALOGEX 0, 0, 277, 179
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CLIPCHILDREN
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Default Base Path",IDC_STATIC,2,1,275,59
+    EDITTEXT        IDC_PATH,7,41,264,12,ES_AUTOHSCROLL
+    LTEXT           "When organizing, this directory will be used if the base watch folder cannot be determined.  If no directory is specified here, files will be skipped if the watch folder cannot be determined.",
+                    IDC_STATIC,9,13,264,27
+    GROUPBOX        "Invalid Character Replacement",IDC_STATIC,1,66,275,67
+    EDITTEXT        IDC_SYS_CHAR,7,80,18,12,ES_AUTOHSCROLL
+    CONTROL         "Check here to replace space characters as well.",
+                    IDC_REPLACE_SPACES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    16,98,169,10
+    LTEXT           "The characters SYS_CHARS are reserved by the O/S and can't be used in filenames.  Specify the replacement character here.",
+                    IDC_SYSCHAR_TEXT,28,78,236,19
+    LTEXT           "NOTE: These replacements will ONLY be made in the file tag information, NOT in the renaming format string.",
+                    IDC_STATIC,52,112,188,19
+    GROUPBOX        "Empty Directories",IDC_STATIC,2,139,275,36
+    CONTROL         "Check here to remove empty folders from your watch directories.",
+                    IDC_REMOVE_EMPTY_DIRS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,161,225,10
+    LTEXT           "After all the files have been organized, there may be left-over, empty directories.",
+                    IDC_STATIC,9,150,263,8
+END
+
+IDD_CONFIG_ABOUT DIALOGEX 0, 0, 277, 179
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CLIPCHILDREN
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Created by: Jason Heddings",IDC_STATIC,11,16,100,10
+    LTEXT           "This software is provided 'as-is', without any express or implied warranty.  In no event will the authors be held liable for any damages arising from the use of this software.",
+                    IDC_STATIC,11,81,258,23
+    LTEXT           "Major thanks to saivert for all the Win32 help.  And thanks to forrestje for keeping me on track (as usual).",
+                    IDC_STATIC,11,134,255,18
+    CTEXT           "LOGO PLACEHOLDER",IDC_STATIC,130,13,127,41,
+                    SS_CENTERIMAGE
+    LTEXT           "Copyright (c) 2005, Heddway",IDC_COPYRIGHT,11,41,96,8
+    LTEXT           "http://www.heddway.com/",IDC_URL,11,24,100,8
+    GROUPBOX        "PLUGIN DESCRIPTION",IDC_VERSION,2,1,275,61
+    GROUPBOX        "License Agreement",IDC_STATIC,2,69,275,44
+    GROUPBOX        "Contributors",IDC_STATIC,2,122,275,55
+    LTEXT           "Some code was used from the ml_ipod project.  If you have an iPod, then you definitely need this plugin.",
+                    IDC_STATIC,11,154,260,16
+END
+
+IDD_CONFIG_LOGGING DIALOGEX 0, 0, 277, 179
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CLIPCHILDREN
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_LOGFILE,54,3,222,14,ES_AUTOHSCROLL | WS_GROUP | NOT 
+                    WS_TABSTOP
+    COMBOBOX        IDC_LOG_LEVEL,2,3,48,101,CBS_DROPDOWNLIST | WS_GROUP | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_LOG_CONTENTS,2,21,275,137,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "Clear Log Contents",IDC_CLEAR_LOG,25,162,100,14
+    PUSHBUTTON      "Open Logfile",IDC_OPEN_LOG,154,162,100,14
+END
+
+IDD_CONFIG_RULES DIALOGEX 0, 0, 277, 179
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CLIPCHILDREN
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Add Rule",IDC_RULE_ADD,9,160,50,14
+    PUSHBUTTON      "Edit Rule",IDC_RULE_EDIT,63,160,50,14,WS_DISABLED
+    PUSHBUTTON      "Delete Rule",IDC_RULE_DELETE,117,160,50,14,WS_DISABLED
+    PUSHBUTTON      "Down",IDC_RULE_DOWN,234,160,37,14,WS_DISABLED
+    CONTROL         "",IDC_RULES,"SysListView32",LVS_REPORT | LVS_SINGLESEL | 
+                    LVS_SHOWSELALWAYS | LVS_OWNERDATA | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,8,113,264,43
+    LTEXT           "Rules can be created to specify different renaming formats for certain conditions.  Rules are processed from top to bottom. If no rule is matched, the file will not be renamed.",
+                    IDC_STATIC,9,84,264,24
+    GROUPBOX        "Files To Organize",IDC_STATIC,2,1,275,68
+    EDITTEXT        IDC_QUERY,7,33,264,12,ES_AUTOHSCROLL
+    LTEXT           "Using a standard query, specify which files should be considered for organization.  Typical queries will filter for specific filenames. (e.g. filename ends ""mp3"")",
+                    IDC_STATIC,9,12,264,16
+    PUSHBUTTON      "Edit Query",IDC_QUERY_EDIT,150,50,50,14
+    PUSHBUTTON      "Test Query",IDC_QUERY_TEST,209,50,50,14
+    PUSHBUTTON      "Reset Default Query",IDC_QUERY_RESET,21,50,91,14
+    GROUPBOX        "Organization Rules",IDC_STATIC,2,74,275,105
+    PUSHBUTTON      "Up",IDC_RULE_UP,192,160,37,14,WS_DISABLED
+END
+
+IDD_CONFIG_BLANK DIALOGEX 0, 0, 277, 179
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CLIPCHILDREN
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Blank Tab",IDC_STATIC,2,1,275,177
+    LTEXT           "This page is a place holder for a future tab.",
+                    IDC_STATIC,77,89,140,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_CONFIG_LOGGING DLGINIT
+BEGIN
+    IDC_LOG_LEVEL, 0x403, 6, 0
+0x7245, 0x6f72, 0x0072, 
+    0
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
